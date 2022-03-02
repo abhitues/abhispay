@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.paymentapp.SplashFragment"
+        android:label="Abhi's Pay"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.paymentapp.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sendmoneyFragment"
+            app:destination="@id/sendmoneyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.example.paymentapp.viewBalanceFragment"
+        android:label="View Balance"
+        tools:layout="@layout/fragment_view_balance" />
+    <fragment
+        android:id="@+id/sendmoneyFragment"
+        android:name="com.example.paymentapp.SendmoneyFragment"
+        android:label="Send Money"
+        tools:layout="@layout/fragment_sendmoney" >
+        <action
+            android:id="@+id/action_sendmoneyFragment_to_moneyAmtFragment"
+            app:destination="@id/moneyAmtFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moneyAmtFragment"
+        android:name="com.example.paymentapp.MoneyAmtFragment"
+        android:label="Amount"
+        tools:layout="@layout/fragment_money_amt" >
+        <action
+            android:id="@+id/action_moneyAmtFragment_to_successFragment"
+            app:destination="@id/sucessFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/sucessFragment"
+        android:name="com.example.paymentapp.SucessFragment"
+        android:label="Success"
+        tools:layout="@layout/fragment_sucess" >
+        <argument
+            android:name="personName"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="float"
+            android:defaultValue="0.00" />
+    </fragment>
+</navigation>
