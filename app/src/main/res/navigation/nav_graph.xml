@@ -11,7 +11,9 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -20,10 +22,14 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_viewBalanceFragment"
-            app:destination="@id/viewBalanceFragment" />
+            app:destination="@id/viewBalanceFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_sendmoneyFragment"
-            app:destination="@id/sendmoneyFragment" />
+            app:destination="@id/sendmoneyFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
@@ -37,7 +43,9 @@
         tools:layout="@layout/fragment_sendmoney" >
         <action
             android:id="@+id/action_sendmoneyFragment_to_moneyAmtFragment"
-            app:destination="@id/moneyAmtFragment" />
+            app:destination="@id/moneyAmtFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/moneyAmtFragment"
@@ -46,7 +54,9 @@
         tools:layout="@layout/fragment_money_amt" >
         <action
             android:id="@+id/action_moneyAmtFragment_to_successFragment"
-            app:destination="@id/sucessFragment" />
+            app:destination="@id/sucessFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="name"
             app:argType="string" />
